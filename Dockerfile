@@ -33,7 +33,7 @@ RUN REFLEX_API_URL=${API_URL:-http://localhost:$PORT} reflex export --loglevel d
 
 
 # Final image with only necessary files
-FROM python:3.13-slim
+FROM python:3.11-slim
 
 # Install Caddy and redis server inside image
 RUN apt-get update -y && apt-get install -y caddy redis-server && rm -rf /var/lib/apt/lists/*
